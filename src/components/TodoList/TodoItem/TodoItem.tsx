@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../Button/Button';
 
-import styles from './TodoItem.module.css';
+import styles from './TodoItem.module.scss';
 
 import {observer} from "mobx-react-lite";
 

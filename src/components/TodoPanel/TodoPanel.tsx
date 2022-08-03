@@ -2,7 +2,7 @@ import React from 'react';
 
 import Button from '../Button/Button';
 
-import styles from './TodoPanel.module.css';
+import styles from './TodoPanel.module.scss';
 
 import {observer} from "mobx-react-lite";
 

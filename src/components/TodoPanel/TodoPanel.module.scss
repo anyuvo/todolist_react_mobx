@@ -13,28 +13,26 @@
     gap: 10px;
 }
 
+.field_container {
+    width: 100%;
+    label {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 15px;
+    }
+    input {
+        font-size: 15px;
+        padding: 10px 5px;
+        border-radius: 2px;
+        border: 0.5px solid black;
+    }
+}
+
 @media (max-width: 768px) {
     .fields_container {
         flex-direction: column;
     }
-}
-
-.field_container {
-    width: 100%;
-}
-
-.field_container label {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    font-size: 15px;
-}
-
-.field_container input {
-    font-size: 15px;
-    padding: 10px 5px;
-    border-radius: 2px;
-    border: 0.5px solid black;
 }
 
 .button_container {

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './App.module.css';
+import styles from './App.module.scss';
 
 import Header from './components/Header/Header';
 import TodoPanel from "./components/TodoPanel/TodoPanel";

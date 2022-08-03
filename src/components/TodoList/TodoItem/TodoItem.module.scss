@@ -32,10 +32,9 @@
     padding: 8px 20px;
     cursor: pointer;
     background-color: white;
-}
-
-.todo_item_button_delete:hover {
-    background-color: rgba(210, 25, 25, 0.05);
+&:hover {
+     background-color: rgba(210, 25, 25, 0.05);
+ }
 }
 
 .todo_item_button_edit {
@@ -45,8 +44,7 @@
     padding: 8px 20px;
     cursor: pointer;
     background-color: white;
-}
-
-.todo_item_button_edit:hover {
-    background-color: rgba(210, 84, 25, 0.05);
+&:hover {
+     background-color: rgba(210, 84, 25, 0.05);
+ }
 }
