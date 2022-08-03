@@ -13,6 +13,12 @@
     gap: 10px;
 }
 
+@media (max-width: 768px) {
+    .fields_container {
+        flex-direction: column;
+    }
+}
+
 .field_container {
     width: 100%;
 }

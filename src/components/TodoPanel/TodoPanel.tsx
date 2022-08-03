@@ -45,13 +45,14 @@ const TodoPanel: React.FC<TodoPanelProps> = observer((props) => {
                 <div className={styles.field_container}>
                     <label htmlFor='name'>
                         <div>name</div>
-                        <input autoComplete='off' id='name' value={todo.name} onChange={onChange} name='name' />
+                        <input className={styles.input_field} autoComplete='off' id='name' value={todo.name} onChange={onChange} name='name' />
                     </label>
                 </div>
                 <div className={styles.field_container}>
                     <label htmlFor='description'>
                         <div>description</div>
                         <input
+                            className={styles.input_field}
                             autoComplete='off'
                             id='description'
                             value={todo.description}

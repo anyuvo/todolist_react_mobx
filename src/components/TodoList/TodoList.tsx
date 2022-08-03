@@ -13,6 +13,7 @@ interface TodoListProps {
     checkTodo: (id: Todo['id']) => void;
     selectTodoIdForEdit: (id: Todo['id']) => void;
     changeTodo: ({name, description}: Omit<Todo, 'id' | 'checked'>) => void;
+    viewTodosFilter: string;
 }
 
 const TodoList: React.FC<TodoListProps> = ({
@@ -21,22 +22,26 @@ const TodoList: React.FC<TodoListProps> = ({
                                                changeTodo,
                                                deleteTodo,
                                                checkTodo,
-                                               selectTodoIdForEdit
+                                               selectTodoIdForEdit,
+                                               viewTodosFilter
                                            }) => (
     <div>
         {todos.map((todo) => {
             if (todo.id === todoIdForEdit)
                 return <TodoPanel mode='edit' changeTodo={changeTodo} editTodo={todo}/>;
-
-            return (
-                <TodoItem
-                    key={todo.id}
-                    todo={todo}
-                    deleteTodo={deleteTodo}
-                    checkTodo={checkTodo}
-                    selectTodoIdForEdit={selectTodoIdForEdit}
-                />
-            );
+            if (viewTodosFilter === 'COMPLETED' && todo.checked
+                || viewTodosFilter === 'ACTIVE' && !todo.checked
+                || viewTodosFilter === 'ALL') {
+                return (
+                    <TodoItem
+                        key={todo.id}
+                        todo={todo}
+                        deleteTodo={deleteTodo}
+                        checkTodo={checkTodo}
+                        selectTodoIdForEdit={selectTodoIdForEdit}
+                    />
+                );
+            }
         })}
     </div>
 );

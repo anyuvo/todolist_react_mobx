@@ -6,6 +6,7 @@ import TodoPanel from "./components/TodoPanel/TodoPanel";
 import TodoList from "./components/TodoList/TodoList";
 import {observer} from "mobx-react-lite";
 import todosM from './store/todo';
+import TodoFilter from "./components/TodoFilter/TodoFilter";
 
 const App = () => {
 
@@ -21,6 +22,12 @@ const App = () => {
                     checkTodo={todosM.checkTodo}
                     selectTodoIdForEdit={todosM.selectTodoIdForEdit}
                     changeTodo={todosM.changeTodo}
+                    viewTodosFilter={todosM.viewTodosFilter}
+                />
+                <TodoFilter filterAll={todosM.filterAll}
+                            filterActive={todosM.filterActive}
+                            filterCompleted={todosM.filterCompleted}
+                            viewTodosFilter={todosM.viewTodosFilter}
                 />
             </div>
         </div>
