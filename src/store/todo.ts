@@ -62,37 +62,19 @@ class Todos {
     };
 
     filterAll = () => {
-        // console.log(this.todos);
         this.viewTodosFilter = 'ALL';
-        // return this.todos;
 
     }
 
     filterActive = () => {
-        // console.log(this.todos.filter((todo) => !todo.checked));
         this.viewTodosFilter = 'ACTIVE';
-        // return this.todos.filter(todo => !todo.checked);
 
     }
 
     filterCompleted = () => {
-        // console.log(this.todos.filter((todo) => todo.checked));
         this.viewTodosFilter = 'COMPLETED';
-        // return this.todos.filter(todo => todo.checked);
 
     }
-
-    // get todosFiltered() {
-    //     if (this.viewTodosFilter === 'ALL') {
-    //         return this.todos;
-    //     } else if (this.viewTodosFilter === 'ACTIVE') {
-    //         return this.todos.filter(todo => !todo.checked);
-    //     } else if (this.viewTodosFilter === 'COMPLETED') {
-    //         return this.todos.filter(todo => todo.checked);
-    //     }
-    //
-    //     return this.todos;
-    // }
 }
 
 export default new Todos();
